@@ -32,14 +32,17 @@ console.log(fuzzyMatch(["Bobby", "Joe", "Anna", "bobby"], "boB"));
 //whose name property matches the provided string argument.
 function matchName(collection, cb){
     const newArray = [];
-    
+
+    const newList = collection.filter(element => element.name === cb);
+    /*
     for (const user of collection){
         if (user.name === cb) {
             newArray.push(user);
         }
     }
+    */
 
-    return newArray;
+    return newList;
 };
 
 console.log(matchName([
